@@ -1,7 +1,4 @@
 package com.rohith.userservice.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
-@RequestMapping("/user")
-public class UserController {
+public interface UserController {
 }
