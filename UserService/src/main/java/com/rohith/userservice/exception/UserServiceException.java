@@ -1,4 +1,17 @@
 package com.rohith.userservice.exception;
 
-public class UserServiceException {
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+
+@Data
+public class UserServiceException extends RuntimeException {
+
+    private String message;
+
+    private HttpStatus httpStatus ;
+
+    public UserServiceException(String message, HttpStatus httpStatus) {
+        super(message);
+        this.httpStatus = httpStatus;
+    }
 }
