@@ -3,6 +3,7 @@
     <words>
       <w>getallusers</w>
       <w>getuser</w>
+      <w>getuserbyname</w>
     </words>
   </dictionary>
 </component>

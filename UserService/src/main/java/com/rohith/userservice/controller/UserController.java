@@ -19,4 +19,6 @@ public interface UserController {
 
     ResponseEntity<UserResponseDto> updateUser(UserRequestDto userRequestDto);
 
+    ResponseEntity<UserResponseDto> getUserByName(String name);
+
 }
