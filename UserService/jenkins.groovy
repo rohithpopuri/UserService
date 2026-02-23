@@ -14,18 +14,20 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo/springboot-app.git'
+                git branch: 'main', url: 'https://github.com/rohithpopuri/UserService.git'
             }
         }
 
         stage('Build Maven') {
             steps {
+                dir('UserService')
                 sh 'mvn clean package -DskipTests'
             }
         }
 
         stage('Build Docker Image') {
             steps {
+                dir('UserService')
                 sh 'docker build -t ${IMAGE_NAME} .'
             }
         }
