@@ -20,8 +20,10 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-                dir('UserService')
-                sh 'mvn clean package -DskipTests'
+                dir('UserService'){
+                    sh 'mvn clean package -DskipTests'
+                }
+
             }
         }
 
